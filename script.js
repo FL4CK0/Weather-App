@@ -48,7 +48,9 @@ async function getWeatherData(latitude, longitude) {
     return data;
 }
 
-function displayWeatherData(data, location) { 
+
+
+function displayWeatherData(data, location, dataHourly) { 
     Array.from(card.children).forEach(child => {
         if (child !== weatherForm) {
             child.remove();
@@ -108,6 +110,9 @@ function displayWeatherData(data, location) {
         96: "⛈️",  // Thunderstorm with slight hail
         99: "⛈️",  // Thunderstorm with heavy hail
     }; 
+
+    
+
 
     weatherDisplay.textContent = ` ${weatherDesc}`;
     emojiDisplay.textContent = ` ${weatherEmojis[weather_code]}`;
