@@ -34,7 +34,7 @@ async function getCoordinates(location) {
 }
 
 async function getWeatherData(latitude, longitude) {
-    const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m&wind_speed_unit=ms`);
+    const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,weather_code,wind_speed_10m&wind_speed_unit=ms`);
     if (!response.ok) {
         throw new Error("Failed to fetch weather data");
     }
@@ -51,9 +51,9 @@ function displayWeatherData(data) {
         }
     });
     card.style.display = 'flex';
-    const temperatureData = data.hourly.temperature_2m;
+    const temperatureData = data.current.temperature_2m;
     const temperatureDisplay = document.createElement('p');
-    temperatureDisplay.textContent = `Temperature: ${temperatureData[0]}°C`;
+    temperatureDisplay.textContent = `Temperature: ${temperatureData}°C`;
     card.appendChild(temperatureDisplay);
     
 }
