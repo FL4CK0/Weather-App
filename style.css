@@ -1,0 +1,49 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:hsl(271, 25%, 56%);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weatherForm{
+    margin:20px;
+
+}
+
+.locationInput{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    /*text-align: center;*/
+    border: 2px hsla(0, 0%, 20%, 0.3) solid;
+    border-radius: 25px;  
+    margin-top: 10px;
+    width: 300px;
+}
+
+button[type="submit"]{
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 20px;
+    border: 2px hsla(0, 0%, 20%, 0.3) solid;
+    border-radius: 25px;
+    background-color: rgb(153, 50, 204);
+    color: white;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover{
+    background-color: rgb(139, 0, 139, 0.7);
+}
+
+.card{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(180deg,rgb(147, 97, 241), rgb(153, 50, 204));
+    padding: 80px;
+    border-radius: 100px;
+}

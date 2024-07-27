@@ -3,17 +3,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Home</title>
+    <title>WeatherApp</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-
-    <form class ="WeatherForm">
-    <input type="text" class="LocationInput" placeholder="Search for city" />
+    <!--
+    <form class ="weatherForm">
+    <input type="text" class="locationInput" placeholder="Search for city" />
     <button type="submit"> Search </button> 
     </form>
-
-    <div>
+    --->
+    <div class = "card">
+      <form class ="weatherForm">
+        <input type="text" class="locationInput" placeholder="Search for city" />
+        <button type="submit"> Search </button> 
+      </form>
+      <h1 class = "locatinDisplay"> Tranemo </h1>
+      <p class = "tempDisplay"> 20°C </p>
+      <p class="windDisplay"> 5 m/s </p>
+      <p class = "weatherDisplay"> Cloudy </p>
+      <p class = "emojiDisplay"> ☁️🌞 </p>
+      <p class="errorDisplay"> Please enter a location </p>
         
     </div>
 
